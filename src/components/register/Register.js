@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Securitydetail from './securitydetail'
 import Personaldetail from './PersonalDetail'
 import Confirmmation from './Confirmmation'
+import Thankyou from './Thankyou'
+
 
 export default class Register extends Component {
 
@@ -34,60 +36,50 @@ export default class Register extends Component {
                 case 'username':
                     const regex = /^[A-Za-z0-9]{8,}$/
                     const regex_exec = regex.exec(user.username)
-                    if (regex_exec) {
-                        return true
+                    if (!(regex_exec)) {
+                        validateError.push("User just have alphabet and number, minimun lenght is 8 letters.")
                     }
-                    validateError.push("User just have alphabet and number, minimun lenght is 8 letters.")
-                    return false
+                    break
                 case 'password':
-                    if (user.password.length < 8 ) {
+                    if (user.password.length < 8) {
                         validateError.push("Password must be longer than 8 charts.")
                     }
-                    if (user.password === user.password2) {
-                        return true
-                    } else {
+                    if (user.password !== user.password2) {
                         validateError.push("Confim password are not correct.")
                     }
-                    return false
+                    break
                 case 'firstName':
-                    if (user.firstName.length > 0) {
-                        return true
+                    if (user.firstName.length < 1) {
+                        validateError.push("You must fill First name")
                     }
-                    validateError.push("You must fill First name")
-                    return false
+                    break
                 case 'lastName':
-                    if (user.lastName.length > 0) {
-                        return true
+                    if (user.lastName.length < 1) {
+                        validateError.push("You must fill Last name")
                     }
-                    validateError.push("You must fill Last name")
-                    return false
+                    break
                 case 'userConfirmation':
-                    if (user.userConfirmation) {
-                        return true
+                    if (!(user.userConfirmation)) {
+                        validateError.push("You must confim")
                     }
-                    return false
+                    break
                 case 'birthDay':
                     const regexBirthDay = /^[0-9]{4}$/
                     const regex_exec_regexBirthDay = regexBirthDay.exec(user.birthDay)
-                    if (regex_exec_regexBirthDay) {
-                        return true
+                    if (!(regex_exec_regexBirthDay)) {
+                        validateError.push("Must be 4 digits")
                     }
-                    validateError.push("Can't fill more 4 digits.")
-                    return false
+                    break
                 default:
-                    return false
+                    validateError.push('')
             }
         })
         this.setState({ validateError })
-        return result.reduce((total, item) => total * item)
-
+        return validateError.length === 0 ? true : false
     }
 
     handleStep() {
-        console.log(1, this.isValidate(['username', 'password']) )
-        console.log(2, this.isValidate(['firstName', 'lastName']) )
-        console.log(3, this.isValidate(['userConfirmation']) )
-        if (this.state.step===1 && this.isValidate(['username', 'password'])) {
+        if (this.state.step === 1 && this.isValidate(['username', 'password'])) {
             this.setState({
                 step: this.state.step + 1
             })
@@ -98,7 +90,9 @@ export default class Register extends Component {
             })
         }
         if (this.state.step === 3 && this.isValidate(['userConfirmation'])) {
-        // Do something
+            this.setState({
+                step: this.state.step + 1
+            })
         }
     }
 
@@ -151,7 +145,8 @@ export default class Register extends Component {
                         isValidate={this.isValidate}
                         onChangeSec={this.handleChangeSec}
                     />
-
+                case 4:
+                    return <Thankyou />
                 default:
                 // Do nothing
             }

@@ -31,7 +31,7 @@ export default class Personaldetail extends Component {
                     <label>Birthday</label>
                     <input type="number" min='0' max='2019' placeholder='Birthday' defaultValue={value.birthDay} onChange={this.props.onChange('birthDay')} />
                 </Form.Field>
-                <Button onClick={this.props.nextStep}>Next</Button>
+                <Button type='button' onClick={this.props.nextStep}>Next</Button>
             </Form>
         )
     }

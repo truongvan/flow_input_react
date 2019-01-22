@@ -18,7 +18,7 @@ export default class Securitydetail extends Component {
                     <label>Confim Password</label>
                     <input type='password' placeholder='Confim Password' defaultValue={value.password2} onChange={this.props.onChange('password2')} />
                 </Form.Field>
-                <Button onClick={this.props.nextStep}>Next</Button>
+                <Button type="button" onClick={this.props.nextStep}>Next</Button>
             </Form>
         )
     }

@@ -7,7 +7,6 @@ import {
     Image,
     List,
     Segment,
-    Breadcrumb,
 } from 'semantic-ui-react'
 
 
@@ -20,13 +19,6 @@ export default class Layout extends Component {
         return (
             <div>
                 <Container text style={{ marginTop: '5em' }}>
-                    <Breadcrumb>
-                        <Breadcrumb.Section link>Home</Breadcrumb.Section>
-                        <Breadcrumb.Divider />
-                        <Breadcrumb.Section link>Store</Breadcrumb.Section>
-                        <Breadcrumb.Divider />
-                        <Breadcrumb.Section active>T-Shirt</Breadcrumb.Section>
-                    </Breadcrumb>
                 </Container>
 
                 <Container text style={{ marginTop: '2em' }}>
@@ -72,7 +64,6 @@ export default class Layout extends Component {
                         </Grid>
 
                         <Divider inverted section />
-                        <Image centered size='mini' src='/logo.svg' />
                         <List horizontal inverted divided link size='small'>
                             <List.Item as='a' href='#'>
                                 Site Map

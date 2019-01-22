@@ -26,7 +26,7 @@ export default class Confirmmation extends Component {
                 </Segment>
                 <Form>
                     <Form.Checkbox onChange={this.handleChange} checked={value.userConfirmation} label='I agree to the Terms and Conditions' />
-                    <Button onClick={this.props.nextStep}>Next</Button>
+                    <Button type='button' onClick={this.props.nextStep}>Next</Button>
                 </Form>
             </div>
 
