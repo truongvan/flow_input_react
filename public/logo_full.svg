@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="588 461 1252 250" width="1252" height="250">
+  <defs>
+    <font-face font-family="Arial" font-size="200" panose-1="2 11 7 4 2 2 2 2 2 4" units-per-em="1000" underline-position="-105.95703" underline-thickness="104.98047" slope="0" x-height="518.5547" cap-height="715.8203" ascent="905.2734" descent="-211.91406" font-weight="700">
+      <font-face-src>
+        <font-face-name name="Arial-BoldMT"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <g id="Spuare_2" stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>Spuare 2</title>
+    <g id="Spuare_2: Layer 1">
+      <title>Layer 1</title>
+      <g id="Graphic_2">
+        <path d="M 613 484 L 758 484 C 771.8071 484 783 495.1929 783 509 L 783 654 C 783 667.8071 771.8071 679 758 679 L 613 679 C 599.1929 679 588 667.8071 588 654 L 588 509 C 588 495.1929 599.1929 484 613 484 Z" fill="red"/>
+        <text transform="translate(593 466.7285)" fill="white">
+          <tspan font-family="Arial" font-size="200" font-weight="700" fill="white" x="3.6328125" y="181">d.</tspan>
+        </text>
+      </g>
+      <g id="Graphic_5">
+        <text transform="translate(817.5 471.2285)" fill="white">
+          <tspan font-family="Arial" font-size="200" font-weight="700" fill="white" x=".30078125" y="181">domogram</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
